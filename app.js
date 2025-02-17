@@ -39,14 +39,27 @@ function atualizarLista(){
     } 
 }
 //Função para selecionar um nome aleatório 
-function sortearAmigo(){
-    // irá gerar um numero aleatorio entre 0 e o numero da variavel/array
-    let numeroAleatorio = Math.floor(Math.random() * listaDeNomes.length); 
+function sortearAmigo() {
+    // Verifica se ainda há nomes na lista para sortear
+    if (listaDeNomes.length === 0) {
+        alert("Todos os nomes já foram sorteados!");
+        return;
+    }
+
+    // Gera um número aleatório entre 0 e o número de elementos na lista
+    let numeroAleatorio = Math.floor(Math.random() * listaDeNomes.length);
+
     // Usa o numeroAleatorio para selecionar um nome da lista
     let nomeEscolhido = listaDeNomes[numeroAleatorio];
-   
+
+    // Exibe o nome sorteado na tela
     document.getElementById("resultado").innerHTML = `O amigo sorteado foi: <strong>${nomeEscolhido}</strong>`;
 
-    console.log(nomeEscolhido) 
- 
+    // Remove o nome sorteado da lista
+    listaDeNomes.splice(numeroAleatorio, 1);
+
+    // Atualiza a lista de nomes exibida na tela
+    atualizarLista();
+
+    console.log(nomeEscolhido);
 }
