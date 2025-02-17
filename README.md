@@ -23,6 +23,13 @@ o projeto se trata de um pequeno jogo onde você pode colocar o nome de seus ami
 
 Basta inserir os nomes no local sugerido, e apertar o botão ''sortear amigo'' e pronto, você recebera um dos nomes aleatoriamente, lembrando que sempre que um nome for sorteado, ele será removido da lista
 
+### Tecnologia Utilizadas
+
+- JavaScript
+- Css
+- HTML
+ 
+
 ### Instalação
 
 Siga estas etapas para configurar o projeto localmente:
